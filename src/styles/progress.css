@@ -1,0 +1,90 @@
+/* Progress Steps */
+.progress-steps-container {
+  position: absolute;
+  bottom: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(44, 44, 44, 0.8);
+  padding: 20px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  z-index: 40;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  min-width: 400px;
+}
+
+.progress-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-close-btn:hover {
+  color: #fff;
+}
+
+.progress-close-btn .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.progress-step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  color: #999;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.progress-step.active {
+  color: #fff;
+  font-weight: 500;
+}
+
+.progress-step.completed {
+  color: #888;
+}
+
+.progress-step.success {
+  color: #4A90E2;
+  font-weight: 600;
+}
+
+.progress-step.success .step-icon .loading-square {
+  background: #4A90E2;
+}
+
+.progress-step.success .step-percent {
+  color: #4A90E2;
+}
+
+.step-icon {
+  font-size: 1rem;
+  min-width: 24px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-text {
+  flex: 1;
+}
+
+.step-percent {
+  color: #4CAF50;
+  font-weight: 600;
+  font-size: 0.9rem;
+  min-width: 45px;
+  text-align: right;
+}

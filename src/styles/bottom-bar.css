@@ -1,0 +1,212 @@
+/* Bottom Bar (TLauncher Style) */
+.bottom-bar {
+  height: 80px;
+  background: white;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 15px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  z-index: 50;
+  justify-content: center;
+}
+
+.bottom-bar > * {
+  flex: 0 0 auto;
+}
+
+.bottom-bar .version-group {
+  position: absolute;
+  left: 20px;
+}
+
+.bottom-bar .input-group {
+  position: absolute;
+  right: 20px;
+}
+
+.bottom-bar .tools-group {
+  position: absolute;
+  right: 240px;
+}
+
+.input-group, .version-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 0 0 auto;
+}
+
+.user-input, .version-select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  background: white;
+  color: #333;
+  height: 40px;
+  min-width: 200px;
+}
+
+.version-select option {
+  background: white;
+  color: #333;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #666;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #eee;
+  border-radius: 2px;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.account-name {
+  background: #f5f5f5;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #333;
+}
+
+.play-btn {
+  background: white;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0 40px;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  min-width: 200px;
+  transition: all 0.2s;
+}
+
+.play-btn:hover {
+  border-color: #999;
+  background: #f9f9f9;
+}
+
+.play-btn:disabled {
+  background: #f5f5f5;
+  color: #999;
+  cursor: not-allowed;
+  opacity: 0.6;
+  border-color: #e0e0e0;
+}
+
+.tools-group {
+  display: flex;
+  gap: 10px;
+}
+
+.tool-btn {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.tool-btn:hover {
+  color: #4a8bb8;
+}
+
+.tool-btn .icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Settings Popup */
+.settings-popup {
+  position: absolute;
+  bottom: 100px;
+  left: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  border: 1px solid #eee;
+  z-index: 60;
+  width: 250px;
+}
+
+.setting-group label {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.setting-group .row {
+  display: flex;
+  gap: 10px;
+}
+
+.setting-group input { 
+  width: 100%; 
+}

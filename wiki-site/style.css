@@ -1,0 +1,498 @@
+/* Style Wiki Minecraft - Blanc et épuré */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif, 'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji';
+    background: #f6f6f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header style Minecraft Wiki */
+.wiki-header {
+    background: #fff;
+    border-bottom: 3px solid #3a3a3a;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+}
+
+.site-title {
+    font-size: 1.8rem;
+    color: #3a3a3a;
+    font-weight: 600;
+}
+
+.site-subtitle {
+    color: #666;
+    font-size: 0.95rem;
+    margin-top: 2px;
+}
+
+/* Navigation */
+.wiki-nav {
+    background: #3a3a3a;
+    padding: 0;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 0;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    display: block;
+    transition: background 0.2s;
+    border-right: 1px solid #555;
+}
+
+.nav-link:hover {
+    background: #555;
+}
+
+.nav-link.active {
+    background: #f6f6f6;
+    color: #3a3a3a;
+}
+
+/* Container principal */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Bannière Minecraft */
+.minecraft-banner {
+    background: transparent;
+    border: none;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner-image img {
+    width: 75%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.banner-description {
+    padding: 30px;
+}
+
+.banner-description h2 {
+    color: #3a3a3a;
+    font-size: 1.4rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.banner-description h3 {
+    color: #3a3a3a;
+    font-size: 1.4rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.banner-description p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.banner-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.stat-item strong {
+    font-size: 2rem;
+    color: #3a3a3a;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.stat-item span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Grid principal avec articles et widget Discord */
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 20px;
+}
+
+/* Articles Grid */
+.articles-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.article-card {
+    background: #fff;
+    border: none;
+    padding: 25px;
+    box-shadow: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.article-card:hover {
+    transform: translateY(-2px);
+}
+
+.article-title {
+    font-size: 1.4rem;
+    color: #3a3a3a;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.article-date {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.article-excerpt {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.article-read-more {
+    color: #3a3a3a;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.article-content {
+    color: #333;
+    line-height: 1.8;
+}
+
+.article-content h3,
+.article-content h4 {
+    color: #3a3a3a;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.article-content h3 {
+    font-size: 1.4rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.article-content h4 {
+    font-size: 1.2rem;
+}
+
+.article-content p {
+    margin-bottom: 12px;
+}
+
+.article-content ul {
+    margin-left: 25px;
+    margin-bottom: 12px;
+}
+
+/* Loading et messages */
+.loading,
+.no-articles {
+    background: transparent;
+    border: none;
+    padding: 50px;
+    text-align: center;
+    color: #666;
+}
+
+/* Footer */
+.wiki-footer {
+    background: #3a3a3a;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.wiki-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+}
+
+.language-dropdown {
+    background: #3a3a3a;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 8px 12px;
+    border-radius: 0;
+    font-size: 0.9rem;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.2s;
+}
+
+.language-dropdown:hover {
+    background: #555;
+}
+
+.language-dropdown option {
+    background: #3a3a3a;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Masquer la barre Google Translate */
+.goog-te-banner-frame,
+.goog-te-balloon-frame,
+.goog-tooltip,
+.goog-tooltip:hover,
+.goog-text-highlight {
+    display: none !important;
+}
+
+body {
+    top: 0 !important;
+}
+
+#google_translate_element {
+    display: none !important;
+}
+
+.skiptranslate {
+    display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav-content {
+        flex-direction: column;
+    }
+    
+    .nav-link {
+        border-right: none;
+        border-bottom: 1px solid #555;
+    }
+    
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .discord-widget {
+        order: -1;
+    }
+    
+    .banner-stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .banner-image {
+        height: 200px;
+    }
+}
+
+/* Widget Discord */
+.discord-widget {
+    background: #fff;
+    border: none;
+    padding: 20px;
+    box-shadow: none;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+}
+
+.discord-widget h3 {
+    color: #3a3a3a;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+}
+
+.discord-widget p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.discord-widget a {
+    display: block;
+    text-decoration: none;
+}
+
+.discord-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.discord-image:hover {
+    transform: scale(1.02);
+}
+
+.discord-widget iframe {
+    border-radius: 5px;
+}
+
+/* Image Viewer Modal */
+.image-viewer {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.viewer-content {
+    max-width: 95%;
+    max-height: 85%;
+    object-fit: contain;
+    animation: zoomIn 0.3s;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.close-viewer {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    user-select: none;
+    z-index: 10000;
+}
+
+.close-viewer:hover {
+    color: #bbb;
+}
+
+/* Page article complète */
+.article-full {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.article-full .article-card {
+    background: transparent;
+    border: none;
+    padding: 25px;
+    box-shadow: none;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    color: #3a3a3a;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #555;
+}

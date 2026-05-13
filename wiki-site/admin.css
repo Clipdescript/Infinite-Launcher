@@ -1,0 +1,252 @@
+/* Style Admin - Minecraft Wiki */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f6f6f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+.admin-header {
+    background: #3a3a3a;
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Panel Admin */
+.admin-panel {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 40px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.panel-title {
+    font-size: 2rem;
+    color: #3a3a3a;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #3a3a3a;
+    padding-bottom: 10px;
+}
+
+.panel-subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Messages */
+.success-message,
+.error-message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-left: 4px solid;
+    display: none;
+}
+
+.success-message {
+    background: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+}
+
+.error-message {
+    background: #f8d7da;
+    border-color: #dc3545;
+    color: #721c24;
+}
+
+/* Formulaire */
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    color: #3a3a3a;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #3a3a3a;
+}
+
+textarea {
+    min-height: 350px;
+    resize: vertical;
+    font-family: 'Courier New', monospace;
+}
+
+.help-text {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* Boutons */
+.btn {
+    background: #3a3a3a;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.btn:hover {
+    background: #555;
+}
+
+.btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.btn-secondary {
+    background: #6c757d;
+    margin-top: 10px;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+}
+
+/* Preview */
+.preview {
+    background: #f9f9f9;
+    padding: 20px;
+    border: 2px solid #ddd;
+    margin-top: 10px;
+}
+
+.preview h3 {
+    font-size: 1.5rem;
+    color: #3a3a3a;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #3a3a3a;
+    padding-bottom: 5px;
+}
+
+.preview-date {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.preview-content {
+    color: #333;
+    line-height: 1.8;
+}
+
+.preview-content h4 {
+    color: #3a3a3a;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.preview-content p {
+    margin-bottom: 10px;
+}
+
+/* Auth Section */
+.auth-section {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.auth-title {
+    font-size: 1.3rem;
+    color: #3a3a3a;
+    margin-bottom: 15px;
+}
+
+.auth-status {
+    padding: 10px;
+    background: #d4edda;
+    border-left: 4px solid #28a745;
+    color: #155724;
+    margin-bottom: 15px;
+}
+
+.auth-status.not-logged {
+    background: #fff3cd;
+    border-color: #ffc107;
+    color: #856404;
+}
+
+/* Footer */
+.admin-footer {
+    background: #3a3a3a;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .admin-panel {
+        padding: 20px;
+    }
+    
+    .panel-title {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,175 @@
+/* Animations et Keyframes */
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes slideIn {
+  from { 
+    opacity: 0; 
+    transform: translateX(-20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateX(0); 
+  }
+}
+
+@keyframes squareBounce {
+  0%, 80%, 100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes loading-square-pulse {
+  0%, 80%, 100% { 
+    transform: scale(0.8); 
+    opacity: 0.5; 
+  }
+  40% { 
+    transform: scale(1); 
+    opacity: 1; 
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animation 4 carrés */
+.loading-squares {
+  display: flex;
+  gap: 3px;
+}
+
+.loading-square {
+  width: 6px;
+  height: 6px;
+  background: #4CAF50;
+  animation: squareBounce 1.2s infinite ease-in-out;
+}
+
+.loading-square:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.loading-square:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-square:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.loading-square:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.loading-squares-inline {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.loading-squares-inline .loading-square {
+  width: 4px;
+  height: 4px;
+  background: #4a8bb8;
+  animation: squareBounce 1.2s infinite ease-in-out;
+}
+
+.loading-squares-inline .loading-square:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.loading-squares-inline .loading-square:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-squares-inline .loading-square:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.loading-squares-inline .loading-square:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.loading-modpacks .loading-squares {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.loading-modpacks .loading-square {
+  width: 12px;
+  height: 12px;
+}
+
+.loading-more .loading-squares {
+  display: flex;
+  gap: 5px;
+}
+
+.loading-more .loading-square {
+  width: 8px;
+  height: 8px;
+}
+
+.loading-more .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+.auth-submit-btn .loading-squares {
+  display: flex;
+  gap: 4px;
+}
+
+.auth-submit-btn .loading-square {
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 2px;
+  animation: loading-square-pulse 1.4s infinite ease-in-out;
+}
+
+.auth-submit-btn .loading-square:nth-child(1) { 
+  animation-delay: -0.32s; 
+}
+
+.auth-submit-btn .loading-square:nth-child(2) { 
+  animation-delay: -0.16s; 
+}
+
+.auth-submit-btn .loading-square:nth-child(3) { 
+  animation-delay: 0s; 
+}
+
+.auth-submit-btn .loading-square:nth-child(4) { 
+  animation-delay: 0.16s; 
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Launcher - Wiki Communautaire</title>
+    <link rel="icon" href="Infinite.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'fr',
+                includedLanguages: 'sq,de,en,ar,hy,az,eu,bn,be,my,bs,bg,ca,zh-CN,ko,hr,da,es,et,fi,gl,ka,el,gu,he,hi,hu,id,ga,is,it,ja,kn,kk,km,ky,lo,lv,lt,mk,ms,ml,mt,mr,mn,ne,no,nl,pa,fa,pl,pt,ro,ru,sr,si,sk,sl,sv,tl,ta,te,th,cs,tr,uk,ur,uz,vi,cy',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="wiki-header">
+        <div class="header-content">
+            <img src="Infinite.ico" alt="Infinite Launcher" class="logo">
+            <div>
+                <h1 class="site-title">Infinite Launcher Wiki</h1>
+                <p class="site-subtitle">Actualités et guides de la communauté Minecraft</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="wiki-nav">
+        <div class="nav-content">
+            <a href="index.html" class="nav-link active">Accueil</a>
+            <a href="download.html" class="nav-link">Télécharger le Launcher Minecraft</a>
+            <a href="#" class="nav-link">FAQ</a>
+            <a href="#" class="nav-link">Communauté</a>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main class="container">
+        <!-- Bannière Minecraft -->
+        <section class="minecraft-banner">
+            <div class="banner-image">
+                <img src="Capture.png" alt="Minecraft" onclick="openImageViewer(this.src)" style="cursor: pointer;" />
+            </div>
+            <div class="banner-description">
+                <h3>Infinite Launcher : Actualités, Mods, Maps et Launcher</h3>
+                <p>Infinite Launcher est le site francophone dédié à Minecraft. Nous vous proposons régulièrement du contenu autour du jeu pour enrichir votre expérience. Vous y trouverez une sélection de mods, de packs de textures, de maps et d'autres fichiers à télécharger pour personnaliser Minecraft selon vos envies.</p>
+                
+                <h3>Téléchargements et Guides</h3>
+                <p>Notre section téléchargement vous permet d'obtenir facilement notre launcher personnalisé ainsi que divers contenus pour Minecraft. Nous avons rédigé de nombreux guides pour vous aider à mieux comprendre les mécaniques du jeu ou à installer facilement du contenu.</p>
+                
+                <h3>Actualités et Communauté</h3>
+                <p>Notre rubrique actualités vous permet de suivre les dernières mises à jour, snapshots et annonces officielles autour de Minecraft. Rejoignez notre communauté Discord pour échanger avec d'autres joueurs passionnés.</p>
+                
+                <p><strong>Bonne lecture et surtout bon jeu !</strong></p>
+            </div>
+        </section>
+
+        <div class="main-grid">
+            <div id="articles-container" class="articles-grid">
+                <div class="loading">Chargement des articles...</div>
+            </div>
+            
+            <!-- Widget Discord -->
+            <aside class="discord-widget">
+                <h3>Discord d'Infinite Launcher</h3>
+                <p>N'hésitez pas à rejoindre le Discord d'Infinite Launcher pour échanger avec la communauté.</p>
+                <a href="https://discord.gg/PUetupkA" target="_blank" rel="noopener noreferrer">
+                    <img src="Discord.png" alt="Rejoindre notre Discord" class="discord-image">
+                </a>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="wiki-footer">
+        <div class="footer-content">
+            <p>Infinite Launcher © 2026, Tous droits réservés. Non approuvé ou associé à Mojang Studios ou Microsoft</p>
+            <div class="language-selector">
+                <select id="languageSelect" class="language-dropdown">
+                    <option value="sq">Shqip (Albanais)</option>
+                    <option value="de">Deutsch (Allemand)</option>
+                    <option value="en">English (Anglais)</option>
+                    <option value="ar">العربية (Arabe)</option>
+                    <option value="hy">Հայերեն (Arménien)</option>
+                    <option value="az">Azərbaycan (Azerbaïdjanais)</option>
+                    <option value="eu">Euskara (Basque)</option>
+                    <option value="bn">বাংলা (Bengali)</option>
+                    <option value="be">Беларуская (Biélorusse)</option>
+                    <option value="my">မြန်မာ (Birman)</option>
+                    <option value="bs">Bosanski (Bosnien)</option>
+                    <option value="bg">Български (Bulgare)</option>
+                    <option value="ca">Català (Catalan)</option>
+                    <option value="zh">中文 (Chinois)</option>
+                    <option value="ko">한국어 (Coréen)</option>
+                    <option value="hr">Hrvatski (Croate)</option>
+                    <option value="da">Dansk (Danois)</option>
+                    <option value="es">Español (Espagnol)</option>
+                    <option value="et">Eesti (Estonien)</option>
+                    <option value="fi">Suomi (Finnois)</option>
+                    <option value="fr" selected>Français</option>
+                    <option value="gl">Galego (Galicien)</option>
+                    <option value="ka">ქართული (Géorgien)</option>
+                    <option value="el">Ελληνικά (Grec)</option>
+                    <option value="gu">ગુજરાતી (Gujarati)</option>
+                    <option value="he">עברית (Hébreu)</option>
+                    <option value="hi">हिन्दी (Hindi)</option>
+                    <option value="hu">Magyar (Hongrois)</option>
+                    <option value="id">Bahasa Indonesia (Indonésien)</option>
+                    <option value="ga">Gaeilge (Irlandais)</option>
+                    <option value="is">Íslenska (Islandais)</option>
+                    <option value="it">Italiano (Italien)</option>
+                    <option value="ja">日本語 (Japonais)</option>
+                    <option value="kn">ಕನ್ನಡ (Kannada)</option>
+                    <option value="kk">Қазақ (Kazakh)</option>
+                    <option value="km">ខ្មែរ (Khmer)</option>
+                    <option value="ky">Кыргызча (Kirghiz)</option>
+                    <option value="lo">ລາວ (Lao)</option>
+                    <option value="lv">Latviešu (Letton)</option>
+                    <option value="lt">Lietuvių (Lituanien)</option>
+                    <option value="mk">Македонски (Macédonien)</option>
+                    <option value="ms">Bahasa Melayu (Malais)</option>
+                    <option value="ml">മലയാളം (Malayalam)</option>
+                    <option value="mt">Malti (Maltais)</option>
+                    <option value="mr">मराठी (Marathi)</option>
+                    <option value="mn">Монгол (Mongol)</option>
+                    <option value="ne">नेपाली (Népalais)</option>
+                    <option value="no">Norsk (Norvégien)</option>
+                    <option value="nl">Nederlands (Néerlandais)</option>
+                    <option value="pa">ਪੰਜਾਬੀ (Pendjabi)</option>
+                    <option value="fa">فارسی (Persan)</option>
+                    <option value="pl">Polski (Polonais)</option>
+                    <option value="pt">Português (Portugais)</option>
+                    <option value="ro">Română (Roumain)</option>
+                    <option value="ru">Русский (Russe)</option>
+                    <option value="sr">Српски (Serbe)</option>
+                    <option value="si">සිංහල (Cingalais)</option>
+                    <option value="sk">Slovenčina (Slovaque)</option>
+                    <option value="sl">Slovenščina (Slovène)</option>
+                    <option value="sv">Svenska (Suédois)</option>
+                    <option value="tl">Tagalog (Tagalog)</option>
+                    <option value="ta">தமிழ் (Tamoul)</option>
+                    <option value="te">తెలుగు (Télougou)</option>
+                    <option value="th">ไทย (Thaï)</option>
+                    <option value="cs">Čeština (Tchèque)</option>
+                    <option value="tr">Türkçe (Turc)</option>
+                    <option value="uk">Українська (Ukrainien)</option>
+                    <option value="ur">اردو (Ourdou)</option>
+                    <option value="uz">O'zbek (Ouzbek)</option>
+                    <option value="vi">Tiếng Việt (Vietnamien)</option>
+                    <option value="cy">Cymraeg (Gallois)</option>
+                </select>
+            </div>
+        </div>
+        <!-- Google Translate Element (caché) -->
+        <div id="google_translate_element" style="display: none;"></div>
+    </footer>
+
+    <!-- Image Viewer Modal -->
+    <div id="imageViewer" class="image-viewer" onclick="closeImageViewer()">
+        <span class="close-viewer">&times;</span>
+        <img class="viewer-content" id="viewerImage" onclick="event.stopPropagation()">
+    </div>
+
+    <!-- Script Image Viewer -->
+    <script src="image-viewer.js"></script>
+    
+    <!-- Script Language -->
+    <script src="language.js"></script>
+    
+    <!-- Script Firebase -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>

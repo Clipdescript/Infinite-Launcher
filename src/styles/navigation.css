@@ -1,0 +1,200 @@
+/* Sidebar Left - Navigation Menu */
+.sidebar-left {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin-bottom: 0;
+  z-index: 50;
+  gap: 0;
+  background: white;
+  padding: 10px 0;
+  border-radius: 0;
+  justify-content: space-between;
+  position: absolute;
+  left: 10px;
+  top: 20px;
+  bottom: 100px;
+  pointer-events: auto;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.nav-menu-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: auto;
+}
+
+.nav-link {
+  color: #666;
+  cursor: pointer;
+  background: transparent;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  border-radius: 0;
+  transition: all 0.2s;
+  border-left: 3px solid transparent;
+  position: relative;
+  text-decoration: none;
+  pointer-events: auto;
+  user-select: none;
+}
+
+.nav-link:hover {
+  color: #4a8bb8;
+}
+
+.nav-link:hover .link-icon {
+  color: #4a8bb8;
+}
+
+.nav-link:hover svg {
+  color: #4a8bb8;
+}
+
+.nav-link.active {
+  color: #4a8bb8;
+}
+
+.nav-link.active .link-icon {
+  color: #4a8bb8;
+}
+
+.nav-link span {
+  display: inline;
+  font-size: 14px;
+  font-weight: 500;
+  color: inherit;
+  pointer-events: none;
+}
+
+.link-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+/* Animation Discord */
+.discord-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.discord-link.copying {
+  pointer-events: none;
+}
+
+.discord-link.copied {
+  color: #4CAF50 !important;
+}
+
+.discord-link .link-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* Sidebar Right (TLauncher Style) */
+.sidebar-right {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 80px;
+  z-index: 10;
+}
+
+.sidebar-title {
+  background: transparent;
+  color: white;
+  text-align: right;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.sidebar-title h2 { 
+  margin: 0; 
+  font-size: 1.8rem; 
+  font-weight: 800; 
+}
+
+.sidebar-title span { 
+  font-size: 0.8rem; 
+  opacity: 0.9; 
+  letter-spacing: 1px; 
+}
+
+.sidebar-btn {
+  background: rgba(52, 152, 219, 0.8);
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-left: 4px solid rgba(255,255,255,0.3);
+}
+
+.sidebar-btn.orange { 
+  background: rgba(243, 156, 18, 0.9); 
+}
+
+.sidebar-btn.blue { 
+  background: rgba(41, 128, 185, 0.9); 
+}
+
+.sidebar-btn .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.sidebar-banner {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  margin-top: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  gap: 10px;
+}
+
+.sidebar-banner.premium {
+  background: linear-gradient(45deg, #111, #333);
+  border: 1px solid #f1c40f;
+}
+
+.sidebar-banner.premium span { 
+  color: #f1c40f; 
+  font-size: 1.2rem; 
+}
+
+.sidebar-banner.discord {
+  background: #5865F2;
+}
+
+.sidebar-banner.discord .icon { 
+  width: 32px; 
+  height: 32px;
+}

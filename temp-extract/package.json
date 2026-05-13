@@ -1,0 +1,22 @@
+{
+  "name": "craft-launcher",
+  "version": "2.0.2",
+  "description": "Launcher Minecraft Moderne",
+  "type": "module",
+  "main": "dist-electron/main.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "@tanstack/react-virtual": "^3.13.24",
+    "adm-zip": "^0.5.16",
+    "electron-updater": "^6.3.0",
+    "firebase": "^12.13.0",
+    "jsdom": "^29.1.1",
+    "minecraft-launcher-core": "^3.18.2",
+    "msmc": "^5.0.5",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "xmldom": "^0.6.0"
+  }
+}

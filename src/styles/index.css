@@ -1,0 +1,33 @@
+/* Fichier principal qui importe tous les modules CSS */
+@import './titlebar.css';
+@import './navigation.css';
+@import './content.css';
+@import './auth.css';
+@import './modpacks.css';
+@import './bottom-bar.css';
+@import './progress.css';
+@import './animations.css';
+
+/* Main App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: #ffffff;
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  position: relative;
+  background-image: url('../assets/Fond.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: row; 
+  align-items: stretch;
+  padding: 20px;
+  gap: 20px;
+}

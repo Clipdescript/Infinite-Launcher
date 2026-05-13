@@ -1,0 +1,432 @@
+/* TLauncher Style Modpacks Overlay */
+.modpacks-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  animation: slideIn 0.3s ease;
+}
+
+.modpacks-header {
+  background: linear-gradient(to bottom, #5ba3d0, #4a8bb8);
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.back-btn {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  padding: 5px 12px;
+  cursor: pointer;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-btn .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.back-btn:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.modpacks-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.version-filter, .top-filter, .categories-select {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.create-btn {
+  background: rgba(255,255,255,0.9);
+  border: 1px solid #ccc;
+  padding: 5px 12px;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.create-btn .icon {
+  width: 16px;
+  height: 16px;
+}
+
+.search-box {
+  display: flex;
+  background: white;
+  border-radius: 3px;
+  overflow: hidden;
+  flex: 1;
+  max-width: 300px;
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  padding: 5px 10px;
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.search-box button {
+  background: #4a8bb8;
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-search {
+  width: 18px;
+  height: 18px;
+}
+
+.sort-label {
+  font-size: 0.85rem;
+  margin-left: auto;
+}
+
+.modpacks-tabs {
+  background: #ffffff;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.tab {
+  background: transparent;
+  border: none;
+  padding: 15px 25px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.tab:hover {
+  color: #4a8bb8;
+}
+
+.tab.active {
+  color: #4a8bb8;
+  font-weight: 600;
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #4a8bb8;
+}
+
+.modpacks-filters {
+  background: #f5f5f5;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.categories-label {
+  margin-left: auto;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.modpacks-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+  background: #f0f0f0;
+}
+
+.loading-modpacks {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.loading-modpacks p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.modpack-item {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  position: relative;
+  transition: box-shadow 0.2s;
+}
+
+.modpack-item:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.modpack-thumbnail {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  border-radius: 0;
+  overflow: hidden;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modpack-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder-thumb-icon {
+  width: 40px;
+  height: 40px;
+  color: #ccc;
+}
+
+.modpack-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.modpack-name {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.modpack-author {
+  margin: 0 0 8px 0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.modpack-author span {
+  color: #4a8bb8;
+  font-weight: 500;
+}
+
+.modpack-description {
+  margin: 0 0 10px 0;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.modpack-stats {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.stat strong {
+  color: #4a8bb8;
+  font-weight: 600;
+}
+
+.install-modpack-btn {
+  background: #5cb85c;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.install-modpack-btn .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.install-modpack-btn:hover {
+  background: #4cae4c;
+}
+
+.favorite-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.favorite-btn .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.favorite-btn:hover {
+  color: #f0ad4e;
+}
+
+.modpacks-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.modpacks-info {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.loading-more {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #4a8bb8;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.load-more-btn {
+  background: #4a8bb8;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.load-more-btn:hover {
+  background: #5a9bc8;
+}
+
+.load-more-btn:active {
+  background: #3a7ba8;
+}
+
+.load-more-btn .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.no-more-modpacks {
+  color: #888;
+  font-size: 0.9rem;
+  font-style: italic;
+  padding: 10px;
+}
+
+/* Scrollbar style Minecraft */
+.modpacks-list::-webkit-scrollbar {
+  width: 18px;
+  background-color: #8B8B8B;
+}
+
+.modpacks-list::-webkit-scrollbar-track {
+  background-color: #8B8B8B;
+  border: 2px solid #373737;
+  box-shadow: 
+    inset 2px 2px 0 0 #555,
+    inset -2px -2px 0 0 #AAA;
+}
+
+.modpacks-list::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #E0E0E0 0%, #C6C6C6 50%, #A0A0A0 100%);
+  border: 2px solid #373737;
+  box-shadow: 
+    inset 2px 2px 0 0 #FFF,
+    inset -2px -2px 0 0 #666,
+    0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.modpacks-list::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #F0F0F0 0%, #D6D6D6 50%, #B0B0B0 100%);
+  box-shadow: 
+    inset 2px 2px 0 0 #FFF,
+    inset -2px -2px 0 0 #777,
+    0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.modpacks-list::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(to bottom, #A0A0A0 0%, #8B8B8B 50%, #707070 100%);
+  box-shadow: 
+    inset 2px 2px 0 0 #555,
+    inset -2px -2px 0 0 #AAA,
+    0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.modpacks-list::-webkit-scrollbar-button {
+  display: none;
+}
