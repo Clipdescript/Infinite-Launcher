@@ -101,11 +101,11 @@ function createWindow() {
         webPreferences: {
             nodeIntegration: false,
             contextIsolation: true,
-            sandbox: false, // Désactiver sandbox pour permettre le chargement des fichiers
+            sandbox: false,
             preload: preloadPath,
             v8CacheOptions: 'code',
             backgroundThrottling: false,
-            webSecurity: false, // IMPORTANT: Désactiver webSecurity pour charger depuis app.asar
+            webSecurity: true,
             allowRunningInsecureContent: false,
             experimentalFeatures: false
         },
@@ -139,9 +139,12 @@ function createWindow() {
     if (isDevMode()) {
         win.loadURL('http://localhost:5173');
     } else {
-        // En production, utiliser file:// protocol
+        // En production, charger depuis dist
         const indexPath = join(__dirname, '../dist/index.html');
-        win.loadURL(`file://${indexPath.replace(/\\/g, '/')}`);
+        
+        win.loadFile(indexPath).catch(err => {
+            console.error('Failed to load index.html:', err);
+        });
     }
 
     // Afficher la fenêtre après un délai si ready-to-show ne se déclenche pas
@@ -243,12 +246,6 @@ function createWindow() {
 }
 
 app.whenReady().then(() => {
-    // Optimisation: enregistrer le protocole file:// pour le chargement sécurisé
-    protocol.handle('file', (request) => {
-        const pathname = decodeURI(request.url.replace('file:///', ''));
-        return net.fetch('file://' + pathname);
-    });
-
     const win = createWindow();
     createMenu(win);
 

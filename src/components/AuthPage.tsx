@@ -1,5 +1,5 @@
-import React from 'react';
-import { ArrowLeftIcon } from '@heroicons/react/24/outline';
+import React, { useState } from 'react';
+import { ArrowLeftIcon, EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
 
 interface AuthPageProps {
   authMode: 'login' | 'register';
@@ -28,13 +28,14 @@ const AuthPage: React.FC<AuthPageProps> = ({
   onSubmit,
   onGoogleSignIn
 }) => {
+  const [showPassword, setShowPassword] = useState(false);
+  
   return (
     <div className="auth-overlay">
       <div className="auth-header">
         <button className="back-btn" onClick={onBack}>
           <ArrowLeftIcon className="icon" />
         </button>
-        <h2>Inscription / Connexion</h2>
       </div>
       
       <div className="auth-content">
@@ -73,13 +74,27 @@ const AuthPage: React.FC<AuthPageProps> = ({
           
           <div className="auth-input-group">
             <label>Mot de passe</label>
-            <input 
-              type="password" 
-              value={authPassword}
-              onChange={(e) => onPasswordChange(e.target.value)}
-              placeholder="••••••••"
-              disabled={authLoading}
-            />
+            <div className="password-input-wrapper">
+              <input 
+                type={showPassword ? "text" : "password"}
+                value={authPassword}
+                onChange={(e) => onPasswordChange(e.target.value)}
+                placeholder="••••••••"
+                disabled={authLoading}
+              />
+              <button 
+                type="button"
+                className="password-toggle-btn"
+                onClick={() => setShowPassword(!showPassword)}
+                tabIndex={-1}
+              >
+                {showPassword ? (
+                  <EyeSlashIcon className="eye-icon" />
+                ) : (
+                  <EyeIcon className="eye-icon" />
+                )}
+              </button>
+            </div>
           </div>
           
           <button 

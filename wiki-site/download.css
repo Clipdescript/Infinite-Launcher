@@ -99,6 +99,13 @@
     transition: none;
     box-shadow: none;
     border: 2px solid #4CAF50;
+    flex-direction: row;
+}
+
+.download-size {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    font-weight: 400;
 }
 
 .download-button:hover {
@@ -218,4 +225,56 @@
     .download-hero h1 {
         font-size: 2rem;
     }
+}
+
+/* Statistiques de téléchargement */
+.download-stats {
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.stats-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.stats-icon {
+    width: 20px;
+    height: 20px;
+    color: #4CAF50;
+}
+
+/* Section notes de version */
+.release-notes-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.release-notes-section h3 {
+    color: #3a3a3a;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.release-notes-section p {
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.github-link {
+    color: #0366d6;
+    text-decoration: underline;
+}
+
+.github-link:hover {
+    color: #0256b8;
 }

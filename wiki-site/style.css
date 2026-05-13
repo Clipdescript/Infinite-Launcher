@@ -421,6 +421,14 @@ body {
     border-radius: 5px;
 }
 
+/* Responsive Discord Widget */
+@media (max-width: 768px) {
+    .discord-widget {
+        position: static;
+        top: auto;
+    }
+}
+
 /* Image Viewer Modal */
 .image-viewer {
     display: none;

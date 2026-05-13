@@ -31,7 +31,8 @@ import {
   ClipboardIcon,
   DocumentDuplicateIcon,
   SpeakerWaveIcon,
-  PauseIcon
+  PauseIcon,
+  ArrowRightOnRectangleIcon
 } from '@heroicons/react/24/outline';
 
 // Types pour l'API exposée par preload.js
@@ -252,6 +253,7 @@ const App: React.FC = () => {
   const handleFirebaseLogout = async () => {
     const result = await authService.logout();
     if (result.success) {
+      setFirebaseUser(null);
       alert('Déconnexion réussie');
     }
   };
@@ -438,9 +440,32 @@ const App: React.FC = () => {
         <div className="titlebar-content">
           <span className="app-title-center">Infinite Launcher</span>
           <div className="titlebar-tools">
+            {/* Affichage conditionnel selon l'état d'authentification */}
+            {firebaseUser ? (
+              <>
+                <span className="user-email">{firebaseUser.email}</span>
+                <button 
+                  className="logout-btn" 
+                  onClick={handleFirebaseLogout}
+                  title="Déconnexion"
+                >
+                  <ArrowRightOnRectangleIcon className="icon" />
+                </button>
+              </>
+            ) : (
+              <button 
+                className="auth-btn" 
+                onClick={() => setShowAuth(true)}
+                title="S'authentifier"
+              >
+                S'authentifier
+              </button>
+            )}
+            
             <button className="tool-btn" title="Dossier du jeu">
               <FolderIcon className="icon" />
             </button>
+            
             <button className="tool-btn" onClick={() => setShowSettings(!showSettings)} title="Réglage">
               <CogIcon className="icon" />
             </button>
@@ -477,6 +502,10 @@ const App: React.FC = () => {
               <a href="#" className="nav-link" onClick={(e) => { e.preventDefault(); alert('Support & Aide - Discord: https://discord.gg/PUetupkA'); }} title="Support">
                 <LifebuoyIcon className="link-icon" />
                 <span>Support</span>
+              </a>
+              <a href="#" className="nav-link" onClick={(e) => { e.preventDefault(); alert('Communauté - Partagez vos parties, bugs et vidéos ! (En développement)'); }} title="Communauté">
+                <ChatBubbleLeftRightIcon className="link-icon" />
+                <span>Communauté</span>
               </a>
               <a href="#" className="nav-link" onClick={handleDiscordClick} title="Discord">
                 <svg className="link-icon" viewBox="0 0 24 24" fill="currentColor">

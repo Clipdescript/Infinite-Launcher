@@ -96,3 +96,67 @@
 .titlebar-button:hover .icon-hover {
   opacity: 1;
 }
+
+/* Email utilisateur dans la titlebar */
+.user-email {
+  font-size: 12px;
+  color: #333;
+  font-weight: 500;
+  padding: 4px 10px;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Bouton de déconnexion */
+.logout-btn {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.logout-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.logout-btn .icon {
+  width: 18px;
+  height: 18px;
+  color: #666;
+}
+
+/* Bouton S'authentifier */
+.auth-btn {
+  padding: 5px 12px;
+  background: #e5e7eb;
+  color: #374151;
+  border: none;
+  border-radius: 0;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: none;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-btn:hover {
+  background: #d1d5db;
+}
+
+.auth-btn:active {
+  background: #9ca3af;
+}

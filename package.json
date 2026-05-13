@@ -1,6 +1,6 @@
 {
   "name": "infinite-launcher",
-  "version": "2.0.5",
+  "version": "2.0.7",
   "description": "Infinite Launcher - Launcher Minecraft Moderne",
   "type": "module",
   "main": "dist-electron/main.js",
