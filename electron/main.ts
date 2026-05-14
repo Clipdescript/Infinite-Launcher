@@ -1,3 +1,4 @@
+
 import { app, BrowserWindow, ipcMain, Menu, MenuItemConstructorOptions, protocol, net, shell } from 'electron';
 import pkg from 'electron-updater';
 const { autoUpdater } = pkg;

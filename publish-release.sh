@@ -12,14 +12,10 @@ fi
 GITHUB_TOKEN="$GH_TOKEN"
 REPO_OWNER="Clipdescript"
 REPO_NAME="Infinite-Launcher"
-VERSION="2.0.7"
+VERSION="2.0.9"
 TAG_NAME="v${VERSION}"
 
-# Supprimer le tag local s'il existe
-git tag -d "$TAG_NAME" 2>/dev/null || echo "No local tag to delete"
-
-# Supprimer le tag distant s'il existe
-git push origin ":refs/tags/$TAG_NAME" 2>/dev/null || echo "No remote tag to delete"
+SHA=$(git rev-parse HEAD 2>/dev/null)
 
 # Supprimer la release existante si elle existe
 RELEASE_ID=$(curl -s \
@@ -36,9 +32,26 @@ if [ ! -z "$RELEASE_ID" ]; then
     "https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/releases/$RELEASE_ID"
 fi
 
-# Créer le tag
-git tag -a "$TAG_NAME" -m "Release $VERSION" 2>/dev/null || echo "Tag already exists"
-git push origin "$TAG_NAME" 2>/dev/null || echo "Tag already pushed"
+# Supprimer le tag distant s'il existe (via API)
+curl -s -X DELETE \
+  -H "Authorization: token $GITHUB_TOKEN" \
+  -H "Accept: application/vnd.github.v3+json" \
+  "https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/git/refs/tags/$TAG_NAME" >/dev/null || true
+
+# Créer le tag distant (via API)
+if [ -z "$SHA" ]; then
+  echo "Error: impossible de lire le SHA git (repo non initialisé ?)"
+  exit 1
+fi
+
+curl -s -X POST \
+  -H "Authorization: token $GITHUB_TOKEN" \
+  -H "Accept: application/vnd.github.v3+json" \
+  "https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/git/refs" \
+  -d "{
+    \"ref\": \"refs/tags/$TAG_NAME\",
+    \"sha\": \"$SHA\"
+  }" >/dev/null
 
 # Créer la release via l'API GitHub
 echo "Creating release $TAG_NAME..."
@@ -66,7 +79,7 @@ fi
 echo "Release created with ID: $RELEASE_ID"
 
 # Uploader les fichiers nécessaires pour les mises à jour
-cd "dist-electron"
+cd "release"
 
 # 1. Fichier EXE d'installation
 echo "Uploading installer..."

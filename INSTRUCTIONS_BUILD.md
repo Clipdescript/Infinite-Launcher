@@ -5,6 +5,9 @@ Le fichier `app.asar` est verrouillé par un processus.
 
 ## 🔧 Solution
 
+### 0. Fermer l’app compilée si elle est ouverte
+Si tu as lancé l’application depuis `win-unpacked`, ferme-la (ou termine les processus `Infinite Launcher.exe` / `electron.exe` dans le Gestionnaire des tâches), puis relance la compilation.
+
 ### 1. Redémarrer l'ordinateur
 Cela libérera tous les processus qui bloquent les fichiers.
 
@@ -22,7 +25,7 @@ npm run build
 
 ### 4. Le fichier .exe sera généré ici :
 ```
-dist-electron\Craft Launcher Setup 2.0.2.exe
+release\
 ```
 
 ## 📝 Modifications apportées
@@ -46,16 +49,16 @@ npm run dev
 ```
 
 ### Option 2 : Application compilée
-Double-cliquer sur `dist-electron\Craft Launcher Setup 2.0.2.exe`
+Double-cliquer sur `release\Infinite Launcher Setup 2.0.9.exe`
 
 ## 📦 Uploader sur GitHub Releases
 
 Une fois compilé :
 
-1. Aller sur https://github.com/Clipdescript/craft-launcher/releases
-2. Cliquer sur "Edit" sur la release v2.0.2
+1. Aller sur https://github.com/Clipdescript/Infinite-Launcher/releases
+2. Cliquer sur "Edit" sur la release v2.0.9
 3. Supprimer l'ancien fichier .exe
-4. Uploader le nouveau fichier depuis `dist-electron\`
+4. Uploader le nouveau fichier depuis `release\`
 5. Sauvegarder
 
 Le lien de téléchargement sur le site restera le même !

@@ -77,9 +77,7 @@ async function updateDownloadPage() {
     if (downloadButton) {
         downloadButton.href = releaseInfo.downloadUrl;
         downloadButton.innerHTML = `
-            <svg class="windows-icon" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M0,3.4l9.6-1.3v9.3H0V3.4z M10.6,2l12.8-1.8v10.2H10.6V2z M0,12.6h9.6v9.3L0,20.6V12.6z M10.6,12.6h12.8v10.2 l-12.8-1.8V12.6z"/>
-            </svg>
+            <img src="Windows.png" alt="Windows" class="windows-icon" />
             Télécharger Infinite Launcher v${releaseInfo.version} (${releaseInfo.fileSize} MB)
         `;
     }

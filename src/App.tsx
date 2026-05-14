@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './styles/index.css';
 import logoIcon from '../Infinite.ico';
+import packageJson from '../package.json';
 import { authService } from './firebase';
 import ModpacksPage from './components/ModpacksPage';
 import AuthPage from './components/AuthPage';
@@ -68,6 +69,8 @@ const App: React.FC = () => {
   const [status, setStatus] = useState('');
   const [isLaunching, setIsLaunching] = useState(false);
   const [logs, setLogs] = useState<string[]>([]);
+  const appVersion = packageJson.version || '0.0.0';
+  const publisherName = 'Infinite Launcher Communauté';
   const [userProfile, setUserProfile] = useState<any>(null);
   
   // États pour l'authentification Firebase
@@ -487,7 +490,7 @@ const App: React.FC = () => {
                 <GlobeAltIcon className="link-icon" />
                 <span>Site Officiel</span>
               </a>
-              <a href="#" className="nav-link" onClick={(e) => { e.preventDefault(); alert('À propos de Infinite Launcher v2.0.2'); }} title="À propos">
+              <a href="#" className="nav-link" onClick={(e) => { e.preventDefault(); alert(`Infinite Launcher\nVersion ${appVersion}\n${new Date().toLocaleDateString('fr-FR')}\n${publisherName}`); }} title="À propos">
                 <ExclamationCircleIcon className="link-icon" />
                 <span>À propos</span>
               </a>
